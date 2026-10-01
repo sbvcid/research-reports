@@ -6,7 +6,7 @@ show_title: false
 
 # IBKR Research
 
-Research reports, published in full.
+Buy-side research reports, published in full.
 
 <div class="intro">
 Each report is a complete internal research memo, reproduced without abridgement:

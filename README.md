@@ -1,4 +1,4 @@
-# IBKR-public
+# research-reports
 
 Publication site for research reports. GitHub Pages, Jekyll, kramdown. No
 framework, no npm, no dependencies beyond Jekyll itself.
@@ -30,9 +30,9 @@ reports/<id>.md        one file per report
 
 | Page | URL |
 |---|---|
-| Index | `https://sbvcid.github.io/IBKR-public/` |
-| Report | `https://sbvcid.github.io/IBKR-public/reports/8306-mufg/` |
-| RSS | `https://sbvcid.github.io/IBKR-public/feed.xml` |
+| Index | `https://sbvcid.github.io/research-reports/` |
+| Report | `https://sbvcid.github.io/research-reports/reports/8306-mufg/` |
+| RSS | `https://sbvcid.github.io/research-reports/feed.xml` |
 
 ## Notes
 

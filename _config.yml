@@ -1,10 +1,10 @@
 title: IBKR Research
 description: Research reports
 
-# Set to the repository path on GitHub Pages. For repo "sbvcid/IBKR-public"
-# served at https://sbvcid.github.io/IBKR-public/
+# Set to the repository path on GitHub Pages. For repo "sbvcid/research-reports"
+# served at https://sbvcid.github.io/research-reports/
 url: "https://sbvcid.github.io"
-baseurl: "/IBKR-public"
+baseurl: "/research-reports"
 
 markdown: kramdown
 kramdown:
