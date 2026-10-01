@@ -1,0 +1,38 @@
+title: IBKR Research
+description: Buy-side research reports
+
+# Set to the repository path on GitHub Pages. For repo "sbvcid/IBKR-public"
+# served at https://sbvcid.github.io/IBKR-public/
+url: "https://sbvcid.github.io"
+baseurl: "/IBKR-public"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .git
+  - .jekyll-cache
+
+# ---------------------------------------------------------------------------
+# RSS
+# ---------------------------------------------------------------------------
+# /feed.xml is a hand-written RSS 2.0 template at the repository root, not the
+# jekyll-feed plugin. Reason:
+#
+#   jekyll-feed builds its feed from _posts. This site has no _posts by design,
+#   because every report is a standalone page served at /reports/<id>/. A
+#   jekyll-feed feed would therefore be structurally empty, and pointing its
+#   collection feed at /feed.xml collides with the plugin's own empty posts
+#   feed at the same destination.
+#
+#   The hand-written template iterates only pages carrying
+#   `published: true` in their front matter, so /feed.xml cannot contain
+#   anything that has not been formally published.
+# ---------------------------------------------------------------------------

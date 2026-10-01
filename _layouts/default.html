@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} &middot; {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}">Reports</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+{% if page.title and page.show_title != false %}
+  <article class="report">
+    <header class="report-head">
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
+      {% if page.date %}
+      <p class="meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+        {% if page.report_id %}<span class="sep">&middot;</span> <span class="rid">{{ page.report_id }}</span>{% endif %}
+      </p>
+      {% endif %}
+    </header>
+
+    <div class="report-body">
+      {{ content }}
+    </div>
+  </article>
+{% else %}
+  {{ content }}
+{% endif %}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>{{ site.description }}. Published in full. No analytics, no tracking, no advertising.</p>
+  </div>
+</footer>
+
+</body>
+</html>

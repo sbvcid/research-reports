@@ -1,0 +1,309 @@
+/* IBKR Research — minimal, print-friendly, no dependencies. */
+
+:root {
+  --text: #1a1a1a;
+  --muted: #5f6368;
+  --rule: #d8dce0;
+  --accent: #0b4f9e;
+  --code-bg: #f5f6f8;
+  --quote-bg: #fafbfc;
+  --table-head: #f0f2f4;
+  --wrap: 46rem;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  font-size: 17px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+               Arial, "Noto Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- header / footer ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+  padding: 1rem 0;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.site-nav a:hover { color: var(--accent); }
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  padding: 1.5rem 0 3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- report head ---------- */
+
+.report-head { margin-bottom: 2rem; }
+
+.report-head h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem;
+}
+
+.report-head .subtitle {
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+}
+
+.report-head .meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.report-head .meta .sep { margin: 0 0.35rem; }
+.report-head .rid { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+/* ---------- headings ---------- */
+
+h1, h2, h3, h4 {
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  margin: 2.4rem 0 0.7rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+h3 { font-size: 1.12rem; }
+
+h4 { font-size: 1rem; color: var(--muted); }
+
+/* kramdown auto ids + heading anchor offset */
+h2, h3, h4 { scroll-margin-top: 1rem; }
+
+/* ---------- body text ---------- */
+
+p { margin: 0 0 1.1rem; }
+
+ul, ol { margin: 0 0 1.1rem; padding-left: 1.4rem; }
+li { margin-bottom: 0.35rem; }
+
+a { color: var(--accent); }
+
+strong { font-weight: 650; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.2rem 0;
+}
+
+/* ---------- tables ---------- */
+
+/* Research reports here carry many wide numeric tables.
+   GitHub Pages runs no custom Jekyll plugins, so tables cannot be wrapped in
+   a scroll container at build time. On narrow screens the table itself becomes
+   a horizontal scroll region instead of overflowing the page. */
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 0 0 1.4rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 46rem) {
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+th, td {
+  border: 1px solid var(--rule);
+  padding: 0.42rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--table-head);
+  font-weight: 650;
+}
+
+tbody tr:nth-child(even) { background: #fcfcfd; }
+
+/* ---------- blockquote ---------- */
+
+blockquote {
+  margin: 1.4rem 0;
+  padding: 0.15rem 0 0.15rem 1.1rem;
+  border-left: 3px solid var(--rule);
+  background: var(--quote-bg);
+  color: #333;
+}
+
+blockquote > :last-child { margin-bottom: 0; }
+
+/* ---------- code ---------- */
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.86em;
+  background: var(--code-bg);
+  padding: 0.12em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  margin: 0 0 1.4rem;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.highlight, .highlighter-rouge { background: none; }
+
+div.highlight {
+  background: var(--code-bg);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  margin: 0 0 1.4rem;
+}
+
+div.highlight pre {
+  border: 0;
+  margin: 0;
+  background: none;
+}
+
+/* ---------- index page ---------- */
+
+.report-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.report-list li {
+  border-bottom: 1px solid var(--rule);
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.report-list li:last-child { border-bottom: 0; }
+
+.report-list .r-title {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: var(--text);
+  text-decoration: none;
+  margin-bottom: 0.2rem;
+}
+
+.report-list .r-title:hover { color: var(--accent); }
+
+.report-list .r-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0 0 0.35rem;
+}
+
+.report-list .r-desc {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #444;
+}
+
+.intro { margin-bottom: 2rem; }
+
+.site-footer p { margin: 0; }
+
+/* ---------- print ---------- */
+
+@media print {
+  body { font-size: 11pt; }
+  .site-nav, .site-header { display: none; }
+  .wrap { max-width: none; padding: 0; }
+  .table-scroll { overflow: visible; }
+  a { color: inherit; text-decoration: none; }
+  h2, h3, h4 { page-break-after: avoid; }
+  table, pre, blockquote { page-break-inside: avoid; }
+}
+
+/* ---------- dark mode ---------- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e6e6e6;
+    --muted: #a0a4a8;
+    --rule: #3a3f44;
+    --accent: #7ab3ff;
+    --code-bg: #1e2225;
+    --quote-bg: #1c1f22;
+    --table-head: #25292d;
+  }
+  body { background: #16181a; }
+  blockquote { color: #ddd; }
+  tbody tr:nth-child(even) { background: #1a1d1f; }
+  .report-list .r-desc { color: #ccc; }
+}

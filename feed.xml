@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ '/' | absolute_url | xml_escape }}</link>
+    <atom:link href="{{ '/feed.xml' | absolute_url | xml_escape }}" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll</generator>
+    {%- assign feed_reports = site.pages | where: "published", true | sort: "date" | reverse %}
+    {%- for r in feed_reports %}
+    <item>
+      <title>{{ r.title | xml_escape }}</title>
+      <description>{{ r.description | xml_escape }}</description>
+      <link>{{ r.url | absolute_url | xml_escape }}</link>
+      <guid isPermaLink="true">{{ r.url | absolute_url | xml_escape }}</guid>
+      <pubDate>{{ r.date | date_to_rfc822 }}</pubDate>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>

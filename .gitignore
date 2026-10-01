@@ -1,0 +1,12 @@
+# Jekyll build output and caches — never commit these.
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Local preview server state
+*.log
+
+# OS noise
+.DS_Store
+Thumbs.db
