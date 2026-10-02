@@ -6,14 +6,13 @@ show_title: false
 
 # IBKR Research
 
-Buy-side research reports, published in full.
+Research reports, published in full.
 
 <div class="intro">
-Each report is a complete internal research memo, reproduced without abridgement:
-the derivation chain, the labelling of every figure by its epistemic status, the
-record of figures that were wrong and how they were corrected, and an explicit
-list of the questions the author declined to answer. Reports contain no price
-target, no rating and no recommendation.
+Each report is a complete research memo, reproduced without abridgement:
+the derivation chain, the evidence and epistemic status of its findings, the
+record of corrections, and the questions left unresolved. Reports preserve
+the research process rather than presenting only the final result.
 </div>
 
 ## Reports
