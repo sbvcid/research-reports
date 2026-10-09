@@ -12,8 +12,12 @@ kramdown:
   hard_wrap: false
   syntax_highlighter: rouge
 
+# Agent operating notes are repository documentation, not site content. Without
+# this entry Jekyll would copy AGENTS.md verbatim to _site/AGENTS.md and serve
+# the publication SOP as a public page.
 exclude:
   - README.md
+  - AGENTS.md
   - Gemfile
   - Gemfile.lock
   - vendor

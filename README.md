@@ -19,12 +19,26 @@ reports/<id>.md        one file per report
 
 ## Publishing a new report
 
+**Before publishing anything, read [`AGENTS.md`](AGENTS.md).** It is the
+authoritative publication SOP: what to read, how to locate and confirm the
+source article, slug and front-matter rules, how to prove the body is preserved
+byte-for-byte, the validation checklist, git staging discipline, push and
+deployment verification, and the cases where an agent must stop and report
+instead of guessing. `AGENTS.md` wins if the two ever disagree.
+
+The short version:
+
 1. Add `reports/<id>.md` with front matter containing
-   `layout: default`, `title`, `description`, `date`, `published: true`.
-2. Add the same file to the `reports` list in `_config.yml` is **not** needed —
+   `layout: default`, `title`, `description`, `report_id`, `date`,
+   `published: true`, `permalink: /reports/<id>/`.
+2. Adding the file to a list in `_config.yml` is **not** needed —
    `index.md` and `feed.xml` both enumerate `site.pages | where: "published", true`.
    The index updates itself.
-3. Commit and push. GitHub Pages rebuilds automatically.
+3. Stage only the new report file, commit, and push to `main`. GitHub Pages
+   rebuilds automatically.
+
+`AGENTS.md` and this file are excluded in `_config.yml`, so neither is published
+as a page.
 
 ## URLs
 
