@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "IBKR Research"
+title: "Open Inquiry"
 show_title: false
 ---
 
-# IBKR Research
+# Open Inquiry
 
-Research reports, published in full.
+Evidence-led research across markets, language, technology, and systems.
 
 <div class="intro">
 Each report is a complete research memo, reproduced without abridgement:

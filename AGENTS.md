@@ -11,6 +11,16 @@ dependencies beyond Jekyll, and no tests. Everything here is about moving a
 finished article from "a file someone has" to "a live URL", without changing the
 article.
 
+## Public site identity
+
+The site's public-facing name is **Open Inquiry**, positioned as independent,
+evidence-led research across markets, language, technology, and systems. Use
+this name for site-level titles and public-facing descriptions. The repository
+name remains `sbvcid/research-reports`; keep the existing GitHub Pages base URL,
+report slugs, and report URLs stable unless the owner separately authorizes a
+migration. This identity rule does not authorize rewriting the substance of
+published research.
+
 ---
 
 ## 0. Hard rules

@@ -1,7 +1,13 @@
-# research-reports
+# Open Inquiry
 
-Publication site for research reports. GitHub Pages, Jekyll, kramdown. No
-framework, no npm, no dependencies beyond Jekyll itself.
+Open Inquiry is an independent, evidence-led research publication across
+markets, language, technology, and systems. The site runs on GitHub Pages,
+Jekyll, and kramdown, with no JavaScript framework or npm dependencies.
+
+
+The public-facing site name is **Open Inquiry**. The GitHub repository remains
+`sbvcid/research-reports`, and the existing GitHub Pages URL and report permalinks
+remain unchanged.
 
 **This repository contains published reports only.** The private research
 repository is separate and is never made public.
